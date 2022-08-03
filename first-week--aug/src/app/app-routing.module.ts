@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'accordion',
+    loadChildren: () => import('./accordion/accordion.module').then( m => m.AccordionPageModule)
+  },
 ];
 
 @NgModule({

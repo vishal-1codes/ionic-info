@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>accordion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--slot name are very imp because if you not give name to slot it not display in webpage
+      also color is imp which color you apply to header and content because it change view perpective
+   
+      ion-item is heading of accordion and div tag are sub content of header 
+
+      in div we add slot and in build class it give extra padding to element
+
+      in ion-accordion-group tag we add multiple attribute is show we open multiple accordion.
+      value attribute give you power which ion-accordion item open or close using ion-accordion value name
+      
+    -->
+  <ion-accordion-group [multiple]="true" [value]="['first','third']">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Model</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        MUV
+      </div>
+      <div class="ion-padding" slot="content">
+        SUV
+      </div>
+      <div class="ion-padding" slot="content">
+        COUPE
+      </div>
+    
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Capacity</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        2
+      </div>
+      <div class="ion-padding" slot="content">
+        5
+      </div>
+      <div class="ion-padding" slot="content">
+        8
+      </div>
+      
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Fuel</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Petrol
+      </div>
+      <div class="ion-padding" slot="content">
+        CNG
+      </div>
+      <div class="ion-padding" slot="content">
+        Electric
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
