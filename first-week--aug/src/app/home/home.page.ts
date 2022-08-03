@@ -14,6 +14,7 @@ export class HomePage {
     console.log("routerClick");
     
     this.router.navigate(['/accordion'])
+    
   }
 
 }
