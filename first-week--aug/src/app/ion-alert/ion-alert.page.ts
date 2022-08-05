@@ -18,6 +18,7 @@ export class IonAlertPage implements OnInit {
       header: 'Please enter your imformation',
       //message inside array
       buttons: ['OK'],
+      //here we use only placeholder and attributes with maxlength in form of array object
       inputs: [
         {
           placeholder: 'Name'
@@ -45,6 +46,55 @@ export class IonAlertPage implements OnInit {
     //here we close alert
     await alert.present()
     
+  }
+
+  //movie review alert
+  async openMovieReviewForm(){
+    const alert=await this.alertController.create({
+      header:'Inside Voice',
+      buttons:[
+        {
+          text:'MY VOICE',
+          //using handler we can get fill information 
+          handler:(alertData)=>{
+            console.log("alertData",alertData.yourthoughts,alertData.star,alertData.movieis);
+            
+          }
+        }
+      ],
+      inputs:[
+        {
+          
+          type:'textarea',
+          placeholder:'Your thoughts',
+          attributes:{
+            maxlength:100
+          },
+          name:'yourthoughts',
+
+        },
+        {
+          
+          type:'number',
+          placeholder:'Star',
+          attributes:{
+            min: 1,
+            max: 10,
+          },
+          name:'star',
+        },
+        {
+          placeholder:'movie is',
+          attributes:{
+            maxlength:4
+          },
+          name:'movieis'
+        },
+        
+      ]
+    })
+
+    await alert.present()
   }
 
 }
