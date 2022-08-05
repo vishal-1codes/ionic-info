@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'accordion',
     loadChildren: () => import('./accordion/accordion.module').then( m => m.AccordionPageModule)
   },
+  {
+    path: 'ion-alert',
+    loadChildren: () => import('./ion-alert/ion-alert.module').then( m => m.IonAlertPageModule)
+  },
 ];
 
 @NgModule({
