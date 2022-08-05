@@ -71,6 +71,7 @@ export class IonAlertPage implements OnInit {
             maxlength:100
           },
           name:'yourthoughts',
+          
 
         },
         {
