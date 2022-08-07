@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ion-range</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--
+    using min and max property we add starting value and ending value of ion-range
+    
+    we can use ion-label and ion-icon inside ion-range tag for we display starting value and ending value by
+    using slot="start" and slot="end" attribute
+    
+    using dual knobs we can add two slide slider for starting and ending value using bellow attribute 
+    [dualKnobs]="true" [value]="{ lower: 20, upper: 80 }"
+    
+    using pins we can display user selected value which value user selected using bellow attribute
+    [pin]="true" [pinFormatter]="pinFormatter"
+    .ts for getting selected value
+    pinFormatter(value: number) {
+    return `${value}%`;
+    }
+     
+    we also use snap and ticks for selected rage in this property we get break points for selecte perticular value
+    but they not show whichh value is selected using following attribute use
+    [ticks]="true" [snaps]="true" [min]="0" [max]="10"
+
+
+    using event handling we can display which value select user in ion-label
+    (ionChange)="onIonChange($event)
+
+    //we 1st rty this
+
+
+
+  -->
+
+
+  <ion-row style="display:flex; justify-content:center">
+    <ion-col size="12">
+      <ion-text>Basic </ion-text>
+      <ion-range>
+        <ion-label slot="start">Start</ion-label>
+        <ion-label slot="end">End</ion-label>
+      </ion-range>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-text>Middle</ion-text>
+      <ion-range [pin]="true" [pinFormatter]="pinFormatter" [min]="100000" [max]="2500000">
+        <ion-label slot="start">Start</ion-label>
+        <ion-label slot="end">End</ion-label>
+      </ion-range>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-text>Advance</ion-text>
+      <ion-range [pin]="true" [pinFormatter]="pinFormatter" [min]="100000" [max]="2500000" (ionChange)="onIonChange($event)">
+        <ion-label slot="start">Start</ion-label>
+        <ion-label slot="end">End</ion-label>
+      </ion-range>
+      <ion-col size="12">Selected Value : {{rangeValue}}</ion-col>
+    </ion-col>
+  </ion-row>
+</ion-content>

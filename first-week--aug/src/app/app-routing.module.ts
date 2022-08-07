@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'ion-alert',
     loadChildren: () => import('./ion-alert/ion-alert.module').then( m => m.IonAlertPageModule)
   },
+  {
+    path: 'ion-range',
+    loadChildren: () => import('./ion-range/ion-range.module').then( m => m.IonRangePageModule)
+  },
 ];
 
 @NgModule({
