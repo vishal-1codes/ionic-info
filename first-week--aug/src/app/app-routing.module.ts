@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'ion-range',
     loadChildren: () => import('./ion-range/ion-range.module').then( m => m.IonRangePageModule)
   },
+  {
+    path: 'ion-badge',
+    loadChildren: () => import('./ion-badge/ion-badge.module').then( m => m.IonBadgePageModule)
+  },
 ];
 
 @NgModule({
