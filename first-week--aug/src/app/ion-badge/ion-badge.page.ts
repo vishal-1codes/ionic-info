@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ion-badge.page.scss'],
 })
 export class IonBadgePage implements OnInit {
-  storeI:any;
-
+  storeI:number;
+  storeJ:any;
   constructor() { }
 
   ngOnInit() {
@@ -15,13 +15,34 @@ export class IonBadgePage implements OnInit {
   }
 
   dosettime(){
-   for(let i=0;i<=10;i++){
+   for(let i=0;i<=3;i++){
     setTimeout(()=>{
       console.log("print i",i);
       this.storeI=i
+
+
+      console.log("print store value",this.storeI,typeof(this.storeI));
+   
+      if(this.storeI>=3){
+        this.setWhasapp()
+      }else{
+        console.log("whatsapp function not active");
+      }
+
+      
+
      },i*5000)
    }
+   
+  }
 
+  setWhasapp(){
+    for(let j=0;j<=12;j++){
+      setTimeout(()=>{
+        console.log("j value",j);
+        this.storeJ=j
+      },j*5000)
+    }
   }
 
 }
