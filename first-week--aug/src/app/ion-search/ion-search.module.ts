@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { IonicModule } from '@ionic/angular';
+
+import { IonSearchPageRoutingModule } from './ion-search-routing.module';
+
+import { IonSearchPage } from './ion-search.page';
 import {Ng2SearchPipeModule} from 'ng2-search-filter'
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    IonSearchPageRoutingModule,
     Ng2SearchPipeModule
   ],
-  declarations: [HomePage]
+  declarations: [IonSearchPage]
 })
-export class HomePageModule {}
+export class IonSearchPageModule {}

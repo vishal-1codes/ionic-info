@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit ,ViewChild} from '@angular/core';
 import { RangeValue } from '@ionic/core';
 
 @Component({
@@ -7,10 +7,14 @@ import { RangeValue } from '@ionic/core';
   styleUrls: ['./ion-range.page.scss'],
 })
 export class IonRangePage implements OnInit {
+  maxValue:string="20000"
+  
 
   lastEmittedValue: RangeValue;
 
   rangeValue:number=100000;
+
+  maxDyanamic:any=2000;
 
 
   middleSlectedRange:number;
@@ -18,6 +22,7 @@ export class IonRangePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // document.getElementById("setrange").setAttribute("max","80000")
   }
 
   pinFormatter(value: number) {

@@ -55,7 +55,7 @@
 
     <ion-col size="12">
       <ion-text>Advance</ion-text>
-      <ion-range [pin]="true" [pinFormatter]="pinFormatter" [min]="100000" [max]="2500000" (ionChange)="onIonChange($event)">
+      <ion-range [pin]="true" [pinFormatter]="pinFormatter" [min]="100000" id="setrange" [max]="2500000" (ionChange)="onIonChange($event)">
         <ion-label slot="start">Start</ion-label>
         <ion-label slot="end">End</ion-label>
       </ion-range>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Friend List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!---->
+
+
+  <ion-button id="open-modal" expand="block">Open</ion-button>
+  <ion-label>{{message}}</ion-label>
+
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Dealcars Auto Search car</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content class="ion-padding">
+
+        <ion-searchbar 
+        placeholder="Filter Schedules"
+        [(ngModel)]="searchTerm"
+        showCancelButton="focus" 
+        animated
+
+        [(ngModel)]="name"
+        >
+      
+        </ion-searchbar>
+        <ion-list>
+          <ion-item *ngFor="let an of employee | filter:searchTerm " >
+            <ion-label (click)="clickList(an)">{{an.name}}</ion-label>
+            <ion-label>{{an.job}}</ion-label>
+           
+          </ion-item>
+        </ion-list>
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

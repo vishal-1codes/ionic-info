@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'ion-badge',
     loadChildren: () => import('./ion-badge/ion-badge.module').then( m => m.IonBadgePageModule)
   },
+  {
+    path: 'ion-search',
+    loadChildren: () => import('./ion-search/ion-search.module').then( m => m.IonSearchPageModule)
+  },
 ];
 
 @NgModule({
