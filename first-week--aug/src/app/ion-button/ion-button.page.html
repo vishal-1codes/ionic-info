@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ion-button</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row style="display: flex; justify-content:center;">
+  <ion-button>Default Button</ion-button>
+
+  <!--with link-->
+  <ion-button href="https://www.familycarehospitals.com/">With Link</ion-button>
+
+  <!--with color default color is black and white with default color-->
+  <ion-button color="warning">With color</ion-button>
+
+  <!--size of button -->
+  <ion-col size="12">
+    <!--exapand full we get square border with full width-->
+    <ion-button expand="full">expand full</ion-button>
+    <!--exapand block here we get rouded border with full width-->
+    <ion-button expand="block">expand block</ion-button>
+  </ion-col>
+
+  <ion-col size="12">
+    <!--full rouded button with text width-->
+    <ion-button shape="round">rouded button</ion-button>
+    <!--here we get full width with square border and with top and bottom border-->
+    <ion-button expand="full" fill="outline">full outline</ion-button>
+
+    <!--full width button with rounded corner and with all button border-->
+    <ion-button expand="block" fill="outline">block outline</ion-button>
+
+    <!--rouded button with text size and with full border-->
+    <ion-button shape="round" fill="outline">rouded outline</ion-button>
+
+    <!--ion button with icons-->
+    <!--square button with text width-->
+    <ion-button>
+      <!--slot defined position and name defined icon-->
+      <ion-icon slot="start" name="star"></ion-icon>
+      left side
+    </ion-button>
+
+    <ion-button>
+      right side
+      <ion-icon slot="end" name="star"></ion-icon>
+    </ion-button>
+
+    <ion-button>
+      <!--slot icon-only display only icon if we not use slot icon display centers-->
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    </ion-button>
+
+
+   <!--size-->
+   <!--only increase height size of button ,-->
+   <ion-button size="large">Large size</ion-button>
+   <ion-button>default button</ion-button>
+   <ion-button size="small">small size</ion-button>
+
+
+  </ion-col>
+
+
+
+
+  </ion-row>
+</ion-content>

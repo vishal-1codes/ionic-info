@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'ion-search',
     loadChildren: () => import('./ion-search/ion-search.module').then( m => m.IonSearchPageModule)
   },
+  {
+    path: 'ion-button',
+    loadChildren: () => import('./ion-button/ion-button.module').then( m => m.IonButtonPageModule)
+  },
 ];
 
 @NgModule({
