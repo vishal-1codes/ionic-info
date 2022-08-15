@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'ion-button',
     loadChildren: () => import('./ion-button/ion-button.module').then( m => m.IonButtonPageModule)
   },
+  {
+    path: 'ion-pagination',
+    loadChildren: () => import('./ion-pagination/ion-pagination.module').then( m => m.IonPaginationPageModule)
+  },
 ];
 
 @NgModule({

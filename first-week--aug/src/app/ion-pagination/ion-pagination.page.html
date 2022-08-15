@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ion-pagination</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--
+step 1.
+installation  	
+npm install ngx-pagination --save
+
+step 2
+import in app.module.ts and page that you use pagination
+import { NgxPaginationModule } from 'ngx-pagination';
+imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,NgxPaginationModule],
+
+step 3
+html part 
+
+
+-->
+
+
+<ion-content class="ion-padding">
+  <lon-list>
+    <ion-item *ngFor="let sn of nameOne | paginate:{itemsPerPage: 8, currentPage: cp}" class="listMargin">
+      <il-label>{{sn.sname}}</il-label>
+    </ion-item>
+  </lon-list>
+  <pagination-controls (pageChange)="cp = $event"></pagination-controls>
+</ion-content>
