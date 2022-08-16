@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>infinite-scroll</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--
+    info
+
+    ionInfinite event call when user go to specific distance then we get new data by scroll,
+    complete() call when all data finish in array
+
+    ion-infinite-scroll tag have all login of infinite scroll,
+    ion-infinite-scroll-content have all data that we want to display
+
+    note -
+    import inifinite scroll in ts
+
+
+  -->
+
+  <ion-button (click)="toggleInfiniteScroll()" expand="block">
+    Toggle Infinite Scroll
+  </ion-button>
+  
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data..." *ngFor="let da of data">
+      <ion-label>{{da.namev}}</ion-label>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'emi-cal',
     loadChildren: () => import('./emi-cal/emi-cal.module').then( m => m.EmiCalPageModule)
   },
+  {
+    path: 'infinite-scroll',
+    loadChildren: () => import('./infinite-scroll/infinite-scroll.module').then( m => m.InfiniteScrollPageModule)
+  },
 ];
 
 @NgModule({
