@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'ion-pagination',
     loadChildren: () => import('./ion-pagination/ion-pagination.module').then( m => m.IonPaginationPageModule)
   },
+  {
+    path: 'emi-cal',
+    loadChildren: () => import('./emi-cal/emi-cal.module').then( m => m.EmiCalPageModule)
+  },
 ];
 
 @NgModule({

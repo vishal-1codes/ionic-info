@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>emi-cal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <form [formGroup]="emiForm" (ngSubmit)="getFormData()">
+      <div>
+        <ion-input formControlName="amount" placeholder="enter amount" type="number" required=""></ion-input>
+      </div>
+      <div>
+        <ion-input formControlName="backrate" placeholder="enter rate" type="number" required=""></ion-input>
+      </div>
+      <div>
+        <ion-input formControlName="months" placeholder="enter months" type="number" required=""></ion-input>
+      </div>
+      <div>
+        <ion-button type="submit">SUBMIT</ion-button>
+      </div>
+    </form>
+  </ion-row>
+</ion-content>
