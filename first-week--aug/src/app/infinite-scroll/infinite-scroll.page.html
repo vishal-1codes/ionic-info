@@ -24,11 +24,19 @@
     Toggle Infinite Scroll
   </ion-button>
   
+  <!--
+    loop arary is new array get from filter array
+    when we use this first we want to add if condition where data is present or not 
+    then use this inifinite scroll
+  -->
+  <ion-item *ngFor="let da of dataArray">
+    <ion-list>{{da.namev}}</ion-list>
+  </ion-item>
   <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
     <ion-infinite-scroll-content
       loadingSpinner="bubbles"
-      loadingText="Loading more data..." *ngFor="let da of data">
-      <ion-label>{{da.namev}}</ion-label>
+      loadingText="Loading more data..." >
+     
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 
